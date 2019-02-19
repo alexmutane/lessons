@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>sql-storage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  {{ saved }}
+  <ion-item *ngIf="teaching">
+    {{ teaching.id }}
+
+    <ion-icon name="{{ favoriteIcon }}" item-end (click)="switchFavorite(teaching, favorite)"></ion-icon>
+  </ion-item>
+</ion-content>

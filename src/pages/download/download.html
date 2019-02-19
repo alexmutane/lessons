@@ -1,0 +1,44 @@
+<!--
+  Generated template for the DownloadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Aula de Download</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>
+    <img src="./assets/imgs/logo.png" height="128" width="128">
+  </p>
+  
+  <br/>
+  <button ion-item block color="light" (click)="teste()">
+    <ion-icon name="download" item-start></ion-icon>
+    Criar PDF com jsPDF
+  </button>
+
+  <br/>
+  <button ion-item block color="light" (click)="testeComAppBrowser()">
+    <ion-icon name="download" item-start></ion-icon>
+    Abrir com InAppBrowser
+  </button>
+
+  <br/>
+  <button ion-item block color="light" (click)="abrirPDF()">
+    <ion-icon name="download" item-start></ion-icon>
+    Ler um PDF
+  </button>
+  
+  <br/>
+  <button ion-item block color="light" (click)="baixarFoto()">
+    <ion-icon name="download" item-start></ion-icon>
+    Baixar a Foto
+  </button>
+</ion-content>

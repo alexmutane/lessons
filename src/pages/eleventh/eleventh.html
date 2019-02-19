@@ -1,0 +1,101 @@
+<!--
+  Generated template for the EleventhPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Aula Onze</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <ion-segment [(ngModel)]="mentors">
+      <ion-segment-button value="books">
+        Books
+      </ion-segment-button>
+      <ion-segment-button value="movies">
+        Movies
+      </ion-segment-button>
+      <ion-segment-button value="people">
+        People
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="mentors">
+    <ion-list *ngSwitchCase="'movies'">
+      <ion-item>
+        <h2>The Board.</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Dinner With Perfect Stranger</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'people'">
+      <ion-item>
+        <h2>Pr Liedson de Sousa</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Bernardo Magira</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'books'">
+      <ion-item>
+        <h2>12 Dias Para Actualizar Sua Vida</h2>
+      </ion-item>
+      <ion-item>
+        <h2>O Princípio e Poder da Visão</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <br/><br/>
+  <ion-list>
+    <ion-item>
+      <ion-label block>Livros Bíblicos</ion-label>
+      <ion-select cancelText="cancelar" okText="escolher" multiple="false" (change)="abrirAulaDoze($event)">
+        <ion-option value="proverbios">Provérbios</ion-option>
+        <ion-option value="eclesiastes">Eclesiastes</ion-option>
+        <ion-option value="ev-joao">Evangelho d'João</ion-option>
+        <ion-option value="romanos">Carta aos Romanos</ion-option>
+        <ion-option value="aula12">Ir para Aula 12</ion-option>
+      </ion-select>
+    </ion-item>
+    {{ livros }}
+  </ion-list>
+  <br/>
+  <ion-list>
+    <p>Slide só com texto</p>
+    <ion-slides>
+      <ion-slide>
+        <h2>Vá para o próxima slide SLIDE #01</h2>
+      </ion-slide>
+      <ion-slide>
+        <h2>Avance para o próximo slide SLIDE #02</h2>
+      </ion-slide>
+      <ion-slide>
+        <h2>Este é o último slide. Volte SLIDE #03</h2>
+      </ion-slide>
+    </ion-slides>
+  </ion-list>
+  <ion-list>
+    <p>Slide com 3 imagens</p>
+    <ion-slides>
+      <ion-slide>
+        <img src="http://coderadobe.com/wp-content/uploads/2017/08/ionic-1.png" height="128" widht="128"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="https://s3.amazonaws.com/ionic-marketplace/wikitude-ionic-2-starter-app/icon.png" height="80%"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwwx3VyE1vspRUAe6ioBv0dHez_8oPje5ShJspMrec8T5fLI-9" height="80%"/>
+      </ion-slide>
+    </ion-slides>
+  </ion-list>
+</ion-content>

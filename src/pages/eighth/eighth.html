@@ -1,0 +1,68 @@
+<!--
+  Generated template for the EighthPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Oitava Aula</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>Vindos da aula7</h1>
+  <p *ngIf="id"> {{ id }}</p>
+  <ul *ngFor="let site of websites">
+    <li>{{ site }}</li>
+  </ul>
+
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-icon name="arrow-round-back" color="danger" item-start></ion-icon>
+        <h2>Slide Item 1</h2>
+        <p>swipe from right to left and see the magic.</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="call"></ion-icon> Ligar
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="text"></ion-icon> SMS
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-icon name="arrow-round-forward" color="danger" item-start></ion-icon>
+        <h2>Slide Item 2</h2>
+        <p>swipe from left to right and see the magic.</p>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="call"></ion-icon> Ligar
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="text"></ion-icon> SMS
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/barrett.jpg" />
+      </ion-thumbnail>
+      <h2>Título de alguma coisa que precisamos entender</h2>
+      <p>Esta parte é só para apresentar um texto que na verdade não tem nenhum conteúdo lógico com fundamento. Ao ver este texto não preocupe em ler até ao final. Voce está entendendo? Não acredito! voce está lendo isso até agora? droga!!!</p>
+      <button ion-button clear item-end (click)="abrirNonaAula()">Próx. Aula</button>
+    </ion-item>
+  </ion-list>
+  <button ion-button block color="dark" large (click)="tryLoading()">Loading</button>
+</ion-content>

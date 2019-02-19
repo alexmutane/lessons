@@ -1,0 +1,61 @@
+<!--
+  Generated template for the FivethPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Quinta Aula</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>
+    UserName: <strong>{{ username }}</strong>
+  </p>
+  <ion-item>
+    <ion-label>Pick Date</ion-label>
+    <ion-datetime pickerFormat="DD MM YYYY" displayFormat="DD/MM/YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Pick Time</ion-label>
+    <ion-datetime pickerFormat="HH mm" displayFormat="HH:mm"></ion-datetime>
+  </ion-item>
+  <p><small>limited options: From 01 to 31-May-2018</small></p>
+  <ion-item>
+    <ion-label>Date: min-max</ion-label>
+    <ion-datetime pickerFormat="DD MM YYYY" displayFormat="DD-MM-YYYY" min="2018-05-01" max="2018-05-31"></ion-datetime>
+  </ion-item>
+  <br/>
+  <ion-fab>
+    <button ion-fab mini color="secondary"><ion-icon name="play"></ion-icon></button>
+    <ion-fab-list side="right">
+      <button ion-fab mini><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab mini><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab mini><ion-icon name="logo-skype"></ion-icon></button>
+      <button ion-fab mini><ion-icon name="logo-yahoo"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab center middle>
+    <span color="primary" ion-fab mini><ion-icon name="add"></ion-icon></span>
+    <ion-fab-list side="top">
+      <button ion-fab color="danger" mini><ion-icon name="logo-youtube"></ion-icon></button>
+      <button ion-fab color="danger" mini><ion-icon name="logo-skype"></ion-icon></button>
+      <button ion-fab color="danger" mini><ion-icon name="logo-github"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <button ion-fab color="light" mini><ion-icon name="logo-vimeo"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab color="danger" mini><ion-icon name="logo-google"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="secondary" mini (click)="abrirSextaAula()">aula#6</button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,59 @@
+<!--
+  Generated template for the NinethPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <ion-title>Nona Aula</ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-menu [content]="content" side="right">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu-Right</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item>Conteúdo - Blog</button>
+        <button ion-item>Clube de Leitura</button>
+        <button ion-item>Cursos de Treinamento</button>
+        <button ion-item>Eventos & Conferências</button>
+        <button ion-item menuClose="right">Fechar Menu</button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-menu [content]="content" side="left">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu-Left</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <button ion-item>Conteúdo - Blog</button>
+          <button ion-item>Clube de Leitura</button>
+          <button ion-item>Cursos de Treinamento</button>
+          <button ion-item>Eventos & Conferências</button>
+          <button ion-item menuClose="left">Fechar Menu</button>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+  <ion-content>
+    <button ion-button small menuToggle="left" >Open Left Menu</button>
+    <button ion-button small menuToggle="right">Open Right Menu</button>
+
+    <br/><hr/><br/>
+      <button ion-button full (click)="openModal()">Abrir Modal</button>
+    <br/><hr/><br/>
+    <button ion-button block color="secondary" (click)="abrirDecimaAula()">Próx. Aula</button>
+  </ion-content>
+
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
