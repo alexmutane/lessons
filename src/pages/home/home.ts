@@ -11,6 +11,7 @@ import { GeolocationPage } from '../geolocation/geolocation';
 import { NativestoragePage } from '../nativestorage/nativestorage';
 import { AudioplayPage } from '../audioplay/audioplay';
 import { HighlightPage } from '../highlight/highlight';
+import { KeywordsProvider } from '../../providers/keywords/keywords';
 
 @Component({
   selector: 'page-home',
@@ -18,8 +19,12 @@ import { HighlightPage } from '../highlight/highlight';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(
+    public navCtrl: NavController,
+    private apagarIssoProv: KeywordsProvider
+  ) {
+    //apagar a linha acima a linha abaixo e a respectiva função no provider
+    apagarIssoProv.apagarIsso();
   }
 
   abrirPrimeiraAula(){ this.navCtrl.push(FirstPage); }

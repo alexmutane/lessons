@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1000479612891",
+    "firebase_url": "https://ionic-login-29cfa.firebaseio.com",
+    "project_id": "ionic-login-29cfa",
+    "storage_bucket": "ionic-login-29cfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000479612891:android:e2e7cdbab3c296ca",
+        "android_client_info": {
+          "package_name": "io.ionic.alex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000479612891-f4b3kdirts1air2mem2m0gudtm8dm424.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgEGMzvLuUSr5r2eZ0vzkKhrBBj1MI_QQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

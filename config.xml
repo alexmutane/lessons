@@ -91,7 +91,6 @@
     <allow-navigation href="http://192.168.1.160:8101" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.10" />
     <engine name="browser" spec="~5.0.4" />
-    <engine name="android" spec="~7.0.0" />
     <plugin name="ionic-plugin-deeplinks" spec="^1.0.17">
         <variable name="URL_SCHEME" value="lessons" />
         <variable name="DEEPLINK_SCHEME" value="https" />

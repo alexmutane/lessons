@@ -2,11 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Firebase } from '@ionic-native/firebase';
 
 import { HomePage } from '../pages/home/home';
-import { SharingPage } from '../pages/sharing/sharing';
-import { DownloadPage } from '../pages/download/download';
-import { EighthPage } from '../pages/eighth/eighth';
 
 @Component({
   templateUrl: 'app.html',
@@ -19,6 +17,7 @@ export class MyApp {
     platform: Platform, 
     statusBar: StatusBar, 
     splashScreen: SplashScreen,
+    private firebase: Firebase
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -26,6 +25,14 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+
+    this.analytics();
+  }
+
+  analytics(){
+    this.firebase.getToken().then(token => alert(token) );
+
+    this.firebase.logEvent('started', {page: 'First'})
   }
 }
 

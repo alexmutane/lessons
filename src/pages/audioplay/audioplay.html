@@ -1,9 +1,4 @@
-<!--
-  Generated template for the AudioplayPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -14,18 +9,25 @@
 
 
 <ion-content padding>
-  <!-- {{ audioFile }}
-  <p>
-    <ion-icon name="play" (click)="play()"></ion-icon> &nbsp;&nbsp;
-    <ion-icon name="stop" (click)="pause()"></ion-icon> &nbsp;&nbsp;
-    <ion-icon name="circle" (click)="loop()"></ion-icon> &nbsp;&nbsp;
-  </p> -->
   <ion-list>
-    <div>
-      <audio controls>
-        <source src="{{ mp3file }}" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+    <ion-item *ngFor="let item of listaAudios">
+      {{ item.pt_title }}
+      <ion-icon name="play" (click)="play(item)"></ion-icon> &nbsp;&nbsp;
+    </ion-item>
   </ion-list>
 </ion-content>
+
+<ion-footer *ngIf="showFooter">
+  <div padding>
+    {{ tocando.pt_title }} 
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    {{ currentTime }} / {{ calculateTime(tocando.length) }}
+    &nbsp;&nbsp; 
+    <p text-align="center">
+      <ion-icon name="skip-backward" (click)="prev(tocando)"></ion-icon> &nbsp;&nbsp;
+      <ion-icon *ngIf="showPlayButton" name="play" (click)="play(tocando)"></ion-icon> &nbsp;&nbsp;
+      <ion-icon *ngIf="!showPlayButton" name="pause" (click)="pause(tocando)"></ion-icon> &nbsp;&nbsp;
+      <ion-icon name="skip-forward" (click)="next(tocando)"></ion-icon> &nbsp;&nbsp;
+    </p>
+  </div>
+</ion-footer>

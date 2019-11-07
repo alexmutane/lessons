@@ -12,4 +12,10 @@ export class KeywordsProvider {
     return this.http.get('assets/words.json')
   }
 
+  apagarIsso(){
+    return this.http.get("http:/api.ajudaidai.org/api/assistencia").subscribe(res => {
+      console.log('cors', res)
+    })
+  }
+
 }

@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pesquisar</ion-title>
+  </ion-navbar>
+
+  <div align="center">
+    PESQUISAR: <input #filterInput="ngModel" type="text" name="searchTerm" [(ngModel)]="searchTerm" placeholder="seach" />
+    <ion-searchbar (ionInput)="searchForTeachings($event)"></ion-searchbar>
+  </div>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let teaching of searchingProvider.teachingList">
+      {{ teaching.pt_title }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -33,6 +33,7 @@ import { IonicAudioModule, WebAudioProvider, CordovaMediaProvider, defaultAudioP
 import { HighlightPageModule } from '../pages/highlight/highlight.module';
 import { KeywordsProvider } from '../providers/keywords/keywords';
 import { HttpClientModule } from '@angular/common/http';
+import { Firebase } from '@ionic-native/firebase';
 
 export function myCustomAudioProviderFactory() {
   return (window.hasOwnProperty('cordova')) ? new CordovaMediaProvider() : new WebAudioProvider();
@@ -77,7 +78,8 @@ export function myCustomAudioProviderFactory() {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation, NativeStorage,
-    KeywordsProvider
+    KeywordsProvider,
+    Firebase
   ]
 })
 export class AppModule {}

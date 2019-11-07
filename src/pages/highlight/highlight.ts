@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { KeywordsProvider } from '../../providers/keywords/keywords';
-import * as _ from 'underscore'
-import { fromEvent } from 'rxjs/observable/fromEvent';
 import Rx from 'rxjs/Rx';
 
 @IonicPage()
@@ -20,6 +18,7 @@ export class HighlightPage {
   text4 = "At quis risus sed vulputate odio. Lacus vel facilisis volutpat est velit egestas dui. Amet aliquam id diam maecenas ultricies mi eget mauris pharetra. Accumsan lacus vel facilisis volutpat. Eget duis at tellus at urna condimentum mattis pellentesque id. Amet risus nullam eget felis. Diam maecenas sed enim ut sem viverra aliquet eget. Enim blandit volutpat maecenas volutpat.";
   
   words;
+  sourceEvent;
 
   constructor(
     public navCtrl: NavController, public navParams: NavParams,
@@ -38,7 +37,7 @@ export class HighlightPage {
       }
       this.text1;
 
-        const source = Rx.Observable.fromEvent(document, 'click').subscribe( res => {
+        this.sourceEvent = Rx.Observable.fromEvent(document, 'click').subscribe( res => {
           
           if( (<Element>event.target).className != ''){
             for(let ss of this.words){
@@ -52,8 +51,13 @@ export class HighlightPage {
             }
           }
         })
+
     });
 
   }//construtor 
+
+  ionViewDidLeave(){
+    this.sourceEvent.unsubscribe();
+  }
 
 }
